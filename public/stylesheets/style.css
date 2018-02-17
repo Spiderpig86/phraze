@@ -1,8 +1,22 @@
 body {
   color: #333;
+  background: #fff;
+}
+
+.hero {
   background: #9eff98;
 }
 
-.splash {
-  color: #374054;
+.hero:after {
+  background: url(/images/splash.svg) center;
+  -webkit-background-size: 5223px 186px;
+  background-size: 5223px 186px;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 168px;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
 }
