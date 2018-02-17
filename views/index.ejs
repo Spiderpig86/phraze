@@ -12,24 +12,26 @@
     <div id="splash-img" class="hero fullscreen hero-img parallax-img">
       <div class="hero-body">
           <div class="content text-center">
-              <h3 class="uppercase title"><%= title %></h3>
-              <h5 class="uppercase sub-title faded">Simple passwords are a thing of the past.</h5>
+              <h1 class="uppercase white title"><%= title %></h1>
+              <input type="text" placeholder="Enter a keyword to begin" />
               <space></space>
-              <button class="btn-outline-dark center">Generate <i class="fa fa-chevron-right pad-left"></i></button>
+              
+              <div class="btn-container">
+                  <button class="btn-outline-dark embossed center white">Random Keyword <i class="fa fa-chevron-right pad-right"></i></button>
+                  <button class="btn-outline-dark embossed center white">Generate <i class="fa fa-chevron-right pad-left"></i></button>
+              </div>
           </div>
       </div>
     </div>
-    <space class='x-large'></space>
-    <div class='content'>
-      <div class="row text-center">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem Ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-      </div>
+
+    <space class="x-large"></space>
+
+    <div class="row text-center">
+      <h6>Generated pass phrase:</h4>
+      <h5 class="light">Some pass phrase goes here.</h3>
+      <p class="light">Ctrl + C to copy.</p>
     </div>
-    
-    <div class='content'>
-      <div class='divider'></div>
-    </div>
+
     <script src='javascripts/app.js'></script>
     <script src='javascripts/classie.js'></script>
     <script src="https://use.fontawesome.com/a696b91557.js"></script>
