@@ -1,8 +1,8 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #333;
+  background: #9eff98;
 }
 
-a {
-  color: #00B7FF;
+.splash {
+  color: #374054;
 }
