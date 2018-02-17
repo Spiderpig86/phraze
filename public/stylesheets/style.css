@@ -4,7 +4,7 @@ body {
 }
 
 .hero {
-  background: #9eff98;
+    background: #9eff98;
 }
 
 .hero:after {
@@ -19,4 +19,98 @@ body {
   position: absolute;
   background-repeat: no-repeat;
   width: 100%;
+}
+
+button.btn-outline-dark {
+  color: #404040;
+  background: 0 0;
+  transition: all .3s;
+  border: 1px solid #414141;
+  backface-visibility: hidden;
+
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+
+.btn-outline-dark {
+	overflow: hidden;
+}
+
+.btn-outline-dark:before {
+	color: #fff;
+	z-index: 1;
+}
+
+.btn-outline-dark:after {
+  content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 0;
+	width: 0;
+	background: #51ad4c59;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.btn-outline-dark.btn-activated:after {
+	-webkit-animation: prog-right 0.4s forwards;
+	-moz-animation: prog-right 0.4s forwards;
+	animation: prog-right 0.4s forwards;
+}
+
+@-webkit-keyframes prog-right {
+	to { 
+    width: 100%;
+    opacity: 0%;
+	}
+}
+
+@-moz-keyframes prog-right {
+	to { 
+    width: 100%;
+    opacity: 0%;
+	}
+}
+
+@keyframes prog-right {
+	to { 
+    width: 100%;
+    opacity: 0%;
+	}
+}
+
+.card {
+  box-sizing: border-box;
+  height: auto;
+  padding: 4rem;
+  border: 0;
+  box-shadow: none;
+}
+
+.card.offset-left {
+  margin-right: .5rem;
+}
+
+.card.offset-right {
+  margin-left: .5rem;
+}
+
+.card:hover {
+  box-shadow: 0 0 32px 1px rgba(100, 100, 100, 0.15);
 }
