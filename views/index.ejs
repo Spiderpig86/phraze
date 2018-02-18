@@ -15,6 +15,7 @@
 
     <% include ./partials/nav.ejs %>
 
+    <% if(user) { %>
     <div id="splash-img" class="hero fullscreen hero-img parallax-img">
       <div class="hero-body">
           <div class="content text-center">
@@ -67,6 +68,15 @@
       <h5 id="passPhrase" class="light">Some pass phrase goes here.</h3>
       <p class="light">Ctrl + C or Cmd + C to copy.</p>
     </div>
+    <% }else{ %>
+        <div id="splash-img" class="hero fullscreen hero-img parallax-img">
+            <div class="hero-body">
+                <div class="content text-center">
+                    <h6 class="white title">Welcome to <span class="uppercase"><h2 class="white"><%= title %></h2></span></h6>
+                </div>
+            </div>
+        </div>
+    <% } %>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script async src='javascripts/app.js'></script>
