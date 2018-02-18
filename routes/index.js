@@ -4,12 +4,8 @@ var mongoose = require('mongoose');
 var model = require('../models/phrases');
 
 /* GET home page. */
-<<<<<<< Updated upstream
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Phrases' });
-=======
 router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Express' });
+    res.render('index', { title: 'Phrases' });
 
     model.find({}, function (err, data) {
         if (err) {
@@ -24,7 +20,6 @@ router.get('/get-data', function(req, res, next) {
     var cursor = model.find({}, function(err, db) {
 
     });
->>>>>>> Stashed changes
 });
 
 router.post('/insert', function (req, res, next) {
