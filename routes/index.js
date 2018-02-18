@@ -6,14 +6,6 @@ var model = require('../models/phrases');
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', { title: 'Phrases' });
-
-    model.find({}, function (err, data) {
-        if (err) {
-            throw err;
-        }
-
-        console.log(data);
-    });
 });
 
 router.get('/get-data', function(req, res, next) {
@@ -31,9 +23,6 @@ router.post('/insert', function (req, res, next) {
         model.db.close();
     });
 });
-
-router.
-
 
 
 module.exports = router;
