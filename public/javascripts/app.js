@@ -12,3 +12,19 @@ function activate() {
         setTimeout(() => classie.remove(self, activatedClass), 500);
     }
 }
+
+/**
+ * Highlight pass phrase after clicking generate.
+ */
+document.getElementById('generateButton').addEventListener('click', () => {
+    if (document.selection) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById('passPhrase'));
+        range.select();
+    } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById('passPhrase'));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+    }
+});
