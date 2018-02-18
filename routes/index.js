@@ -38,7 +38,8 @@ router.post('/generate', function(req, res, next) {
 
     // We need to generate the keywords for the pass phrase
     let phrases = generatePassphrase(keyword_num);
-    phrases.splice(keyword_index, 0, keyword);
+    if (keyword.length > 0)
+        phrases[keyword_index] = keyword;
 
     // Iterate over phrases and collate into a sentence
     let phrase = '';
