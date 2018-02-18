@@ -1,7 +1,9 @@
 var express = require('express');
-var router = express.Router();
 var mongoose = require('mongoose');
 var model = require('../models/phrases');
+var router = express.Router();
+
+// mongoose.connect('mongodb://smfc:cewit%401500!@ds239968.mlab.com:39968/phrzae-db')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
