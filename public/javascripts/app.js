@@ -30,6 +30,9 @@ document.getElementById('generateButton').addEventListener('click', () => {
 });
 
 document.getElementById('phraseLenIn').addEventListener('input', function() {
-    if (this.value !== null && !isNaN(this.value))
+    if (this.value !== null && !isNaN(this.value)) {
+        if (parseInt(this.value) < 3) this.value = 3;
+        if (parseInt(this.value) > 20) this.value = 20;
         document.getElementById('phraseLenBtn').innerText = 'Number of Words: ' + this.value;
+    }
 });
