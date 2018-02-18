@@ -162,3 +162,15 @@ input[type]::placeholder {
   letter-spacing: .2rem;
   font-weight: light;
 }
+
+#middleHero {
+  background: /* top, transparent teal, faked with gradient */ linear-gradient( #11998ea8, #11998ea8), /* bottom, image */ url("https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0cb694d3428d849afd8518e09a930119&auto=format&fit=crop&w=1200&q=100");
+  background-attachment: fixed;
+  padding: 4rem 0;
+}
+
+.work-card {
+  box-shadow: 0 1px 3px 0 rgba(39,58,77,.13), 0 0 20px 5px rgba(26,57,78,.05);
+  padding: 2rem;
+  border-left: 5px solid #10d3da;
+}
