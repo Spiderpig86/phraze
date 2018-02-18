@@ -1,3 +1,6 @@
+/**
+ * Main app page
+ */
 body {
   color: #333;
   background: #fff;
@@ -11,8 +14,8 @@ body {
 
 .hero:after {
   background: url(/images/splash.svg) center;
-  -webkit-background-size: 5223px 186px;
-  background-size: 5223px 186px;
+  -webkit-background-size: 5223px 170px;
+  background-size: 5223px 170px;
   bottom: 0;
   content: '';
   display: block;
