@@ -114,7 +114,7 @@ button.btn-outline-dark {
 
 .card {
   box-sizing: border-box;
-  height: auto;
+  height: 100%;
   padding: 4rem;
   border: 0;
   box-shadow: none;
@@ -173,4 +173,9 @@ input[type]::placeholder {
   box-shadow: 0 1px 3px 0 rgba(39,58,77,.13), 0 0 20px 5px rgba(26,57,78,.05);
   padding: 2rem;
   border-left: 5px solid #10d3da;
+}
+
+#endHero {
+  padding: 4rem 0;
+  color: #fff;
 }
