@@ -28,3 +28,8 @@ document.getElementById('generateButton').addEventListener('click', () => {
         window.getSelection().addRange(range);
     }
 });
+
+document.getElementById('phraseLenIn').addEventListener('input', function() {
+    if (this.value !== null && !isNaN(this.value))
+        document.getElementById('phraseLenBtn').innerText = 'Number of Words: ' + this.value;
+});
