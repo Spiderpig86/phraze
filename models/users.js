@@ -1,8 +1,6 @@
 var mongoose = require('mongoose');
 var UserSchema = mongoose.Schema({
-    Users: Array,
-    GoogleId: String,
-    Phrases: Array
+    users: Array
 });
 
-module.exports = mongoose.model("used_phrases", UserSchema);
+module.exports = mongoose.model("users", UserSchema);

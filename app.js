@@ -9,6 +9,9 @@ var index = require('./routes/index');
 var login = require('./routes/login');
 var dashboard = require('./routes/dashboard');
 var authRoute = require('./routes/authRoute');
+var cookieSession = require('cookie-session');
+var passport = require('passport');
+var passportSetup = require('./passport-setup');
 
 // Grab the credentials to access the database.
 var credentials = require('./keys');
@@ -22,6 +25,15 @@ mongoose.connect("mongodb://" + credentials.username + ":" + credentials.passwor
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+// Cookie sessions
+app.use(cookieSession({
+  maxAge: 24 * 60 * 60 * 1000,
+  keys: [credentials.session.cookieKey]
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
