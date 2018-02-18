@@ -12,6 +12,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   </head>
   <body>
+    <% include ./partials/nav.ejs %>
     
     <space class="x-large"></space>
 
@@ -39,24 +40,6 @@
                                 <th>Strength</th>
                             </tr>
                         </thead>
-                        
-                        <tr>
-                            <th>The Quick Brown Fox</th>
-                            <td>999</td>
-                        </tr>
-                        <tr>
-                            <th>Memes</th>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>resgsergesrg erg  argaer</th>
-                            <td>12</td>
-                        </tr>
-                        <tr>
-                            <th>Some other phrase</th>
-                            <td>34</td>
-                        </tr>
-                        
                         <% for(var i = 0; i < user.phrases.length; i++){ %>
                             <tr>
                                 <th> <%= user.phrases[i] %>

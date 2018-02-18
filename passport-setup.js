@@ -24,8 +24,6 @@ passport.use(
                 done(null, currentUser);
             }
             else{
-                
-                console.log(profile.id);
                 new User({
                     user: profile.displayName,
                     googleId: profile.id,
