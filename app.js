@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-let express = require('express');
-let path = require('path');
-let favicon = require('serve-favicon');
-let logger = require('morgan');
-let cookieParser = require('cookie-parser');
-let bodyParser = require('body-parser');
-
-let index = require('./routes/index');
-let users = require('./routes/users');
-let login = require('./routes/login');
-
-let app = express();
-=======
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -26,7 +12,6 @@ var credentials = require('./keys');
 
 // Initialize the app instance as an express app.
 var app = express();
->>>>>>> 7f167f4e65722b8457c91540faea4fd81161102a
 
 // Connect to the database.
 mongoose.connect("mongodb://" + credentials.username + ":" + credentials.password + "@ds239368.mlab.com:39368/phrases");
@@ -44,12 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-<<<<<<< HEAD
-app.use('/users', users);
-app.use('/login', login);
-=======
 //app.use('/users', users);
->>>>>>> 7f167f4e65722b8457c91540faea4fd81161102a
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

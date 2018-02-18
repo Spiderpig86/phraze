@@ -32,8 +32,4 @@ router.post('/insert', function (req, res, next) {
     });
 });
 
-router.
-
-
-
 module.exports = router;
