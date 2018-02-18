@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var model = require('../models/phrases');
 var zxcvbn = require('zxcvbn');
 var router = express.Router();
+var generatePassphrase = require('eff-diceware-passphrase');
 
 // mongoose.connect('mongodb://smfc:cewit%401500!@ds239968.mlab.com:39968/phrzae-db')
 
@@ -27,6 +28,23 @@ router.post('/insert', function (req, res, next) {
     model.insertOne(googleId, function(err, result) {
         model.db.close();
     });
+});
+
+// POST request for requesting a passphrase
+router.post('/generate', function(req, res, next) {
+    var keyword_num = parseInt(req.body.numwords);
+    console.log(keyword_num);
+
+    // We need to generate the keywords for the pass phrase
+    let phrases = generatePassphrase(keyword_num);
+    console.log(phrases);
+
+    // Iterate over phrases and collate into a sentence
+    let phrase = '';
+    for (let word of phrases) {
+        phrase += word + ' ';
+    }
+    res.send(phrase); // Return the response
 });
 
 router.post('/update', function(req, res, next) {
