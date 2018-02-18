@@ -1,12 +1,9 @@
 var mongoose = require('mongoose');
 
 var UserSchema = mongoose.Schema({
-    users : [{
-        googleId : String,
-        username : String,
-        phrases  : [String]
-    }]
-
+    user: String,
+    googleId: String,
+    phrases: []
 });
 
 module.exports = mongoose.model("users", UserSchema);

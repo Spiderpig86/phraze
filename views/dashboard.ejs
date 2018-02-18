@@ -57,6 +57,13 @@
                             <th>Some other phrase</th>
                             <td>34</td>
                         </tr>
+                        
+                        <% for(var i = 0; i < user.phrases.length; i++){ %>
+                            <tr>
+                                <th> <%= user.phrases[i] %>
+                                <td> 949 </td>
+                            </tr>
+                        <% } %>
                     </tbody>
                 </table>
             </div>
