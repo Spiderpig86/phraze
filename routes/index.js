@@ -1,6 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var model = require('../models/phrases');
+var zxcvbn = require('zxcvbn');
 var router = express.Router();
 
 // mongoose.connect('mongodb://smfc:cewit%401500!@ds239968.mlab.com:39968/phrzae-db')
@@ -8,6 +9,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', { title: 'Phraze' , user:req.user});
+    console.log(zxcvbn('hello'));
 });
 
 router.get('/get-data', function(req, res, next) {
