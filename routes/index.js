@@ -7,7 +7,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Phraze' });
+    res.render('index', { title: 'Phraze' , user:req.user});
 });
 
 router.get('/get-data', function(req, res, next) {

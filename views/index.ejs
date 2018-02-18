@@ -16,6 +16,9 @@
       <div class="hero-body">
           <div class="content text-center">
               <h1 class="uppercase white title"><%= title %></h1>
+              <% if(user){ %>
+              <h4> Welcome, <%= user.users[0]%>.</h4>
+              <% } %>
               <input type="text" placeholder="Enter a keyword to begin" />
               <space></space>
               
