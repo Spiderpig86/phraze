@@ -24,7 +24,10 @@ document.getElementById('generateButton').addEventListener('click', () => {
     $.ajax({
         type: "POST",
         url: url,
-        data: { numwords: totalkeywords },
+        data: { 
+            numwords: totalkeywords,
+            seed: document.getElementById('phraseInput').value
+        },
         success: function(phrase) {
             // Set phrase to the inner text of label
             document.getElementById('passPhrase').innerText = phrase;
