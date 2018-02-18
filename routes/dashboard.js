@@ -4,7 +4,7 @@ var users = require('../models/users');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('dashboard', { title: 'Phraze' });
+  res.render('dashboard', { title: 'Phraze', user: req.user });
 
   var user_phrases = [];
   users.find({}, function(err, data) {

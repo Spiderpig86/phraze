@@ -24,9 +24,12 @@ passport.use(
                 done(null, currentUser);
             }
             else{
+                
+                console.log(profile.id);
                 new User({
-                    users: profile.displayName[0],
-                    googleId: profile.id
+                    user: profile.displayName,
+                    googleId: profile.id,
+                
                 }).save().then((newUser)=>{
                     done(null, newUser);
                 });
