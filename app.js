@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', index);
+app.use('/', index);
 app.use('/login', login);
 app.use('/dashboard', dashboard);
 app.use('/auth', authRoute);

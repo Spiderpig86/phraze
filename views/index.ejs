@@ -16,11 +16,13 @@
       <div class="hero-body">
           <div class="content text-center">
               <h1 class="uppercase white title"><%= title %></h1>
-              <input type="text" placeholder="Enter a keyword to begin" />
+              <input id="phraseInput" type="text" placeholder="Enter a keyword to begin" />
               <space></space>
               
               <div class="btn-container">
-                  <button class="btn-outline-dark embossed center white">Number of Words: 5</button> <!-- TODO: Replace 5 with actual value from route file -->
+                  <a href="#phraseLen">
+                      <button id="phraseLenBtn" class="btn-outline-dark embossed center white">Number of Words: 3</button> <!-- TODO: Replace 5 with actual value from route file -->
+                  </a>
                   <button class="btn-outline-dark embossed center white"><i class="fas fa-sync pad-right"></i> Random Keyword</button>
                   <a href="#phraseContainer" class="smoothScroll">
                     <button id="generateButton" class="btn-outline-dark embossed center white">Generate <i class="fa fa-chevron-right pad-left"></i></button>
@@ -28,6 +30,21 @@
               </div>
           </div>
       </div>
+    </div>
+
+    <!-- MODAL DIALOG FOR PHRASE LENGTH -->
+    <div class="modal modal-animated" id="phraseLen">
+        <a href="#splash-img" class="modal-overlay close-btn" aria-label="Close"></a>
+        <div class="modal-content" role="document">
+            <div class="modal-header">
+                <a href="#splash-img" class="pull-right" aria-label="Close"><span class="icon"><i class="fa fa-times" aria-hidden="true"></i></span></a>
+                <div class="modal-title">Select Phrase Length</div>
+            </div>
+            <div class="modal-body">
+                <h6 class="light">Enter desired length for passphrase length.</h6>
+                <input id="phraseLenIn" type="number" value=3 min=3 />
+            </div>
+        </div>
     </div>
 
     <space class="x-large"></space>

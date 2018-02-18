@@ -139,7 +139,6 @@ input[type] {
   border-bottom: 1px solid rgba(0,0,0,.25);
   border-radius: 0;
   font-size: 2rem;
-  color: rgb(255, 255, 255);
   font-weight: 300;
   text-align: center;
 }
@@ -151,4 +150,15 @@ input[type]:focus {
 
 input[type]::placeholder {
   color: rgb(212, 212, 212);
+}
+
+#phraseInput {
+  color: #fff;
+}
+
+.modal-title {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: .2rem;
+  font-weight: light;
 }
