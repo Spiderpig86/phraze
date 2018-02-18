@@ -25,7 +25,6 @@
         </div>
         
             <space class="x-large"></space>
-    
             <div class="tabpage shown">
                 <div class="hide-mobile">
                     <h3>Saved Pass Phrases</h3>
@@ -56,12 +55,13 @@
                         <div class="card-tile tile-center">
                             <div class="tile-icon">
                                 <figure class="avatar">
-                                    <img src=<%= user.avatar %>>
+                                    <img src=
+                                    <%= user.avatar %>>
                                 </figure>
                             </div>
                             <div class="tile-container">
-                                <h5 class="tile-title no-margin light"><%= user.user %></h3>
-                                <h6 class="tile-subtitle no-margin light"><%= user.phrases.length %> pass phrases saved.</h6>
+                                <h5 class="tile-title no-margin light"><%=user.user%></h3>
+                                <h6 class="tile-subtitle no-margin light"><%=user.phrases.length%> phrases saved</h6>
                             </div>
                         </div>
 
@@ -71,19 +71,24 @@
                             <tbody>
                                 <tr>
                                     <th>Name</th>
-                                    <td><%= user.user %></td>
+                                    <td><%=user.user%></td>
                                 </tr>
                                 <tr>
                                     <th>Email</th>
-                                    <td><%= user.email %></td>
+                                    <td><%=user.email%></td>
                                 </tr>
                                 <tr>
                                     <th>Phrases Saved</th>
-                                    <td><%= user.phrases.length %></td>
+                                    <td><%=user.phrases.length%></td>
                                 </tr>
                                 <tr>
                                     <th>Average Phrase Strength</th>
-                                    <td>9.9</td>
+                                    <td><% if(user.phrases.length == 0){ %>
+                                        0
+                                        <% } %>
+
+                                    
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

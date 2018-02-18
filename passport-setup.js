@@ -27,9 +27,15 @@ passport.use(
                 new User({
                     user: profile.displayName,
                     googleId: profile.id,
+<<<<<<< HEAD
                     email: profile.emails[0].value,
                     avatar: profile._json.image.url
                 
+=======
+                    phrases: [],
+                    email: profile.emails[0].value,
+                    avatar: profile._json.image.url
+>>>>>>> 7e862c990594e1574281727914c7eb55cfd8cbcf
                 }).save().then((newUser)=>{
                     done(null, newUser);
                 });
