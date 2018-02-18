@@ -1,0 +1,23 @@
+/**
+ * Styles for the tab control
+ */
+ body {
+     color: #222;
+ }
+
+.tabpage {
+    display: none;
+    min-height: 50vh;
+}
+
+.tabpage.shown {
+    display: block;
+}
+
+.tab-container li.selected a {
+    border-bottom-color: #11998e;
+}
+
+.tab-container li:not(.selected):hover a{
+    border-bottom-color: #11998e73;
+}
