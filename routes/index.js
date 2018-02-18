@@ -9,8 +9,9 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/get-data', function(req, res, next) {
-    var cursor = model.find({}, function(err, db) {
-
+    var result = [];
+    model.find({}, function(err, data) {
+        result.push(data);
     });
 });
 
@@ -22,6 +23,14 @@ router.post('/insert', function (req, res, next) {
     model.insertOne(googleId, function(err, result) {
         model.db.close();
     });
+});
+
+router.post('/update', function(req, res, next) {
+    //model.updateOne();
+});
+
+router.delete('/delete', function(req, res, next) {
+    //model.deleteOne();
 });
 
 module.exports = router;
