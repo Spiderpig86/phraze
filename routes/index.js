@@ -5,7 +5,7 @@ var model = require('../models/phrases');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Phrases' });
+    res.render('index', { title: 'Phraze' });
 });
 
 router.get('/get-data', function(req, res, next) {

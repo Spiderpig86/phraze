@@ -20,8 +20,6 @@ input[type]::placeholder {
 
 .phrase-btn {
     background: #11998e;
-    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
-    background: linear-gradient(to right, #38ef7d, #11998e);
     border: transparent;
     width: 100%;
     padding: 0.9rem;
@@ -34,8 +32,6 @@ input[type]::placeholder {
 
 .phrase-btn:hover {
     background-color: #11998E;
-    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
-    background: linear-gradient(to right, #38ef7d, #11998e);
     border: transparent;
     width: 100%;
     transition: all .3s;
