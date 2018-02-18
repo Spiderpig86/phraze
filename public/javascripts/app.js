@@ -1,4 +1,6 @@
-
+/**
+ * File for the main application
+ */
 let outlineButton = document.querySelectorAll('.btn-outline-dark');
 outlineButton.forEach((e, i) => e.addEventListener('click', activate));
 
