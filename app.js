@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var index = require('./routes/index');
 var login = require('./routes/login');
 var dashboard = require('./routes/dashboard');
+var authRoute = require('./routes/authRoute');
 
 // Grab the credentials to access the database.
 var credentials = require('./keys');
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/login', login);
 app.use('/dashboard', dashboard);
+app.use('/auth', authRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
