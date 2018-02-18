@@ -6,11 +6,7 @@ router.get('/google', passport.authenticate('google', {
 }));
 
 router.get('/google/redirect', passport.authenticate('google'), (req, res)=>{
-    res.redirect('/profile');
-});
-
-router.get('/poll', (req, res)=>{
-    res.redirect('/poll');
+    res.redirect('/');
 });
 
 module.exports = router;
