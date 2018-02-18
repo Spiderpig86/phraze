@@ -14,7 +14,7 @@ var credentials = require('./keys');
 var app = express();
 
 // Connect to the database.
-mongoose.connect("mongodb://" + credentials.username + ":" + credentials.password + "@ds239368.mlab.com:39368/phrases");
+mongoose.connect("mongodb://" + credentials.username + ":" + credentials.password + "@ds239968.mlab.com:39968/phraze-db");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -41,7 +41,7 @@ app.use(function(req, res, next) {
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
-  res.locals.message = err.message;
+  res.locals.message = ersr.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
