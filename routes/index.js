@@ -54,17 +54,7 @@ router.post('/generate', function(req, res, next) {
 router.get('/rand', function(req, res, next) {
 
     // We need to generate the keywords for the pass phrase
-    let phrases = generatePassphrase(keyword_num);
-    phrases.splice(keyword_index, 0, keyword);
-    
-    console.log(phrases);
-
-    // Iterate over phrases and collate into a sentence
-    let phrase = '';
-    for (let word of phrases) {
-        phrase += word + ' ';
-    }
-    res.send(phrase); // Return the response
+    res.send(generatePassphrase(1)); // Return the response
 });
 
 router.post('/update', function(req, res, next) {

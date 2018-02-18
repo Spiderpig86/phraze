@@ -50,6 +50,22 @@ document.getElementById('generateButton').addEventListener('click', () => {
     }
 });
 
+document.getElementById('randomButton').addEventListener('click', () => {
+    var url = "http://localhost:3000/rand";
+
+    $.ajax({
+        type: "GET",
+        url: url,
+        success: function(phrase) {
+            // Set phrase to the inner text of label
+            document.getElementById('phraseInput').value = phrase;
+        },
+        error: function(err) {
+            alert(err.responseText);
+        }
+    });
+});
+
 document.getElementById('phraseLenIn').addEventListener('input', function() {
     if (this.value !== null && !isNaN(this.value)) {
         if (parseInt(this.value) < 3) this.value = 3;
