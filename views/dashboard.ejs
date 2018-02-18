@@ -2,83 +2,112 @@
 <html>
   <head>
     <title><%= title %> Dashboard</title> <!-- TODO: Include username -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/cirrus.min.css' />
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/tabs.css' />
 
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   </head>
   <body>
     
-    <div class="content">
+    <space class="x-large"></space>
+
+    <div id="tabs" class="content">
         <!-- Tab control for the dashboard -->
-    <div class="tab-container tabs-fill">
+        <div class="tab-container tabs-fill">
             <ul>
-                <li class="tab-item"><a>Saved Pass Phrases</a></li>
-                <li class="tab-item selected"><a>Profile</a></li>
+                <li class="tab-item selected"><a>Phrases</a></li>
+                <li class="tab-item"><a>Profile</a></li>
             </ul>
         </div>
+        
+            <space class="x-large"></space>
     
-        <space class="x-large"></space>
-    
-        <div class="tabpage shown">
-            <h3>Profile</h3>
-            <div class="scrollable-container">
-                <p class="settings-title">Autoqueue</p>
-                <div class="row">
-                    <div class="card-tile tile-center">
-                        <div class="tile-icon">
-                            <figure class="avatar">
-                                <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
-                            </figure>
-                        </div>
-                        <div class="tile-container">
-                            <p class="tile-title no-margin">Some Guy.</p>
-                            <p class="tile-subtitle no-margin">23 pass phrasees saved.</p>
-                        </div>
-                    </div>
-    
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>Name</th>
-                                <td>John Doe</td>
-                            </tr>
-                            <tr>
-                                <th>Email</th>
-                                <td>john.doe@gmail.com</td>
-                            </tr>
-                            <tr>
-                                <th>Phrases Saved</th>
-                                <td>john.doe@gmail.com</td>
-                            </tr>
-                            <tr>
-                                <th>Average Phrase Strength</th>
-                                <td>john.doe@gmail.com</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="tabpage shown">
+                <div class="hide-mobile">
+                    <h3>Saved Pass Phrases</h3>
+                    <p>List of previously generated pass phrases.</p>
                 </div>
-        </div>
-        <div class="tabpage">
-            <div class="hide-mobile">
-                <h3>Queue</h3>
+                <space></space>
+                <table class="table">
+                    <tbody>
+                        <thead>
+                            <tr>
+                                <th>Pass Phrase</th>
+                                <th>Strength</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <th>The Quick Brown Fox</th>
+                            <td>999</td>
+                        </tr>
+                        <tr>
+                            <th>Memes</th>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>resgsergesrg erg  argaer</th>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th>Some other phrase</th>
+                            <td>34</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="row level">
-                <p id="totalQueueTime" class="no-margin" style="flex-grow: 1"></p>
-                <button id="btnClearQueue" class="btn-small btn-nimbus">Clear Queue</button>
+
+            <div class="tabpage">
+                <div class="scrollable-container">
+                    <div class="row">
+                        <div class="card-tile tile-center">
+                            <div class="tile-icon">
+                                <figure class="avatar">
+                                    <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
+                                </figure>
+                            </div>
+                            <div class="tile-container">
+                                <h5 class="tile-title no-margin light">John Doe</h3>
+                                <h6 class="tile-subtitle no-margin light">23 pass phrases saved.</h6>
+                            </div>
+                        </div>
+
+                        <space class="x-large"></space>
+        
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>John Doe</td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>john.doe@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <th>Phrases Saved</th>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <th>Average Phrase Strength</th>
+                                    <td>9.9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="divider"></div>
-            <space></space>
-            <div id="queueContainer" class="scrollable-container">
-            </div>
+
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script async src='javascripts/smoothscroll.js'></script>
+    <script async src='javascripts/tabs.js'></script>
+    <script async src='javascripts/tab-loader.js'></script>
     <script async src="https://use.fontawesome.com/a696b91557.js"></script>
   </body>
 </html>
