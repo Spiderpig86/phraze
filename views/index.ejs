@@ -12,6 +12,9 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   </head>
   <body>
+
+    <% include ./partials/nav.ejs %>
+
     <div id="splash-img" class="hero fullscreen hero-img parallax-img">
       <div class="hero-body">
           <div class="content text-center">
@@ -47,6 +50,13 @@
                 <h6 class="light">Enter desired length for passphrase length.</h6>
                 <input id="phraseLenIn" type="number" value=3 min=3 max=20 />
             </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <a href="#splash-img">
+                        <button style="padding: 0 1.5rem;" class="btn-clear btn-small pull-right">Ok</button>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -63,5 +73,6 @@
     <script async src='javascripts/classie.js'></script>
     <script async src='javascripts/smoothscroll.js'></script>
     <script async src="https://use.fontawesome.com/a696b91557.js"></script>
+    <script async src='javascripts/navbar.js'></script>
   </body>
 </html>
