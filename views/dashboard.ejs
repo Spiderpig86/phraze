@@ -40,24 +40,6 @@
                                 <th>Strength</th>
                             </tr>
                         </thead>
-                        
-                        <tr>
-                            <th>The Quick Brown Fox</th>
-                            <td>999</td>
-                        </tr>
-                        <tr>
-                            <th>Memes</th>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>resgsergesrg erg  argaer</th>
-                            <td>12</td>
-                        </tr>
-                        <tr>
-                            <th>Some other phrase</th>
-                            <td>34</td>
-                        </tr>
-                        
                         <% for(var i = 0; i < user.phrases.length; i++){ %>
                             <tr>
                                 <th> <%= user.phrases[i] %>
@@ -74,12 +56,12 @@
                         <div class="card-tile tile-center">
                             <div class="tile-icon">
                                 <figure class="avatar">
-                                    <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
+                                    <img src=<%= user.avatar %>>
                                 </figure>
                             </div>
                             <div class="tile-container">
-                                <h5 class="tile-title no-margin light">John Doe</h3>
-                                <h6 class="tile-subtitle no-margin light">23 pass phrases saved.</h6>
+                                <h5 class="tile-title no-margin light"><%= user.user %></h3>
+                                <h6 class="tile-subtitle no-margin light"><%= user.phrases.length %> pass phrases saved.</h6>
                             </div>
                         </div>
 
@@ -89,15 +71,15 @@
                             <tbody>
                                 <tr>
                                     <th>Name</th>
-                                    <td>John Doe</td>
+                                    <td><%= user.user %></td>
                                 </tr>
                                 <tr>
                                     <th>Email</th>
-                                    <td>john.doe@gmail.com</td>
+                                    <td><%= user.email %></td>
                                 </tr>
                                 <tr>
                                     <th>Phrases Saved</th>
-                                    <td>42</td>
+                                    <td><%= user.phrases.length %></td>
                                 </tr>
                                 <tr>
                                     <th>Average Phrase Strength</th>

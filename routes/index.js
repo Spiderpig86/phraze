@@ -10,7 +10,7 @@ var generatePassphrase = require('eff-diceware-passphrase');
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', { title: 'Phraze' , user:req.user});
-    console.log(zxcvbn('hello'));
+    console.log(user);
 });
 
 router.get('/get-data', function(req, res, next) {
@@ -39,8 +39,6 @@ router.post('/generate', function(req, res, next) {
     // We need to generate the keywords for the pass phrase
     let phrases = generatePassphrase(keyword_num);
     phrases.splice(keyword_index, 0, keyword);
-    
-    console.log(phrases);
 
     // Iterate over phrases and collate into a sentence
     let phrase = '';
@@ -54,7 +52,7 @@ router.post('/generate', function(req, res, next) {
 router.get('/rand', function(req, res, next) {
 
     // We need to generate the keywords for the pass phrase
-    res.send(generatePassphrase(1)); // Return the response
+    res.send(generatePassphrase.entropy(1)); // Return the response
 });
 
 router.post('/update', function(req, res, next) {
