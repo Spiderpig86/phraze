@@ -43,7 +43,7 @@
                         <% for(var i = 0; i < user.phrases.length; i++){ %>
                             <tr>
                                 <th> <%= user.phrases[i] %>
-                                <td> 949 </td>
+                                <td> <%= user.strengths[i] %> </td>
                             </tr>
                         <% } %>
                     </tbody>
@@ -84,9 +84,11 @@
                                 </tr>
                                 <tr>
                                     <th>Average Phrase Strength</th>
-                                    <td><% if(user.phrases.length == 0){ %>
+                                    <td><% if(user.phrases.length == 0){ sum = 0;%>
                                         0
-                                        <% } %>
+                                        <% } else { sum = user.strengths.reduce((a, b) => a + b, 0) }%>
+                                        <%= sum/user.phrases.length %>
+                                
                                     </td>
                                 </tr>
                             </tbody>

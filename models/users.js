@@ -5,7 +5,8 @@ var UserSchema = mongoose.Schema({
     googleId: String,
     phrases: [],
     email: String,
-    avatar: String
+    avatar: String,
+    strengths: []
 });
 
 module.exports = mongoose.model("users", UserSchema);
