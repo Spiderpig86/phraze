@@ -19,7 +19,7 @@ function activate() {
  * Highlight pass phrase after clicking generate.
  */
 document.getElementById('generateButton').addEventListener('click', () => {
-    var url = "http://localhost:3000/generate";
+    var url = "https://localhost:3000/generate";
 
     $.ajax({
         type: "POST",
@@ -51,7 +51,7 @@ document.getElementById('generateButton').addEventListener('click', () => {
 });
 
 document.getElementById('randomButton').addEventListener('click', () => {
-    var url = "http://localhost:3000/rand";
+    var url = "https://localhost:3000/rand";
 
     $.ajax({
         type: "GET",
