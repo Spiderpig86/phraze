@@ -38,12 +38,14 @@
                             <tr>
                                 <th>Pass Phrase</th>
                                 <th>Strength</th>
+                                <th>Average Cracking Time</th>
                             </tr>
                         </thead>
                         <% for(var i = 0; i < user.phrases.length; i++){ %>
                             <tr>
                                 <th> <%= user.phrases[i] %>
                                 <td> <%= user.strengths[i] %> </td>
+                                <td> <%= user.averageCrackTimes[i]%> seconds</td>
                             </tr>
                         <% } %>
                     </tbody>

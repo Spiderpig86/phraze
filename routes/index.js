@@ -47,10 +47,22 @@ router.post('/generate', function(req, res, next) {
     for (let word of phrases) {
         phrase += word + ' ';
     }
+    
     user.findOne({googleId: req.user.googleId}, (err, data)=>{
-        console.log(data.phrases);
         data.phrases.push(phrase);
         data.strengths.push(zxcvbn(phrase).score);
+
+        // Calculate average cracking time
+        var sum = zxcvbn(phrase).crack_times_seconds.online_throttling_100_per_hour + 
+                      zxcvbn(phrase).crack_times_seconds.online_no_throttling_10_per_second +
+                      zxcvbn(phrase).crack_times_seconds.offline_fast_hashing_1e10_per_second +
+                      zxcvbn(phrase).crack_times_seconds.offline_slow_hashing_1e4_per_second;
+        var average = sum/4;
+
+        console.log(average);
+
+        data.averageCrackTimes.push(average);
+
         data.save((err)=>{
             if(err) throw err;
         });

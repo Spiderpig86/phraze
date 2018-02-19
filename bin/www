@@ -6,20 +6,28 @@
 
 var app = require('../app');
 var debug = require('debug')('phrases:server');
-var http = require('http');
+var fs = require('fs');
+// var http = require('http'); // Switching to https
+var https = require('https');
+
+// var PORT = 3000;
+var PORT = '443';
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || PORT);
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
-
-var server = http.createServer(app);
+var options = {
+  key: fs.readFileSync('/etc/letsencrypt/live/phrazes.net/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/phrazes.net/fullchain.pem')
+}
+var server = https.createServer(options, app);
 
 /**
  * Listen on provided port, on all network interfaces.
