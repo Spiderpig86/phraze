@@ -6,7 +6,8 @@ var UserSchema = mongoose.Schema({
     phrases: [],
     email: String,
     avatar: String,
-    strengths: []
+    strengths: [],
+    averageCrackTimes: []
 });
 
 module.exports = mongoose.model("users", UserSchema);
