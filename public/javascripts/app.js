@@ -20,6 +20,7 @@ function activate() {
  */
 document.getElementById('generateButton').addEventListener('click', () => {
     var url = "http://localhost:3000/generate";
+    // var url = "http://phrazes.net/generate"; // Use this for the website
 
     $.ajax({
         type: "POST",
@@ -52,6 +53,7 @@ document.getElementById('generateButton').addEventListener('click', () => {
 
 document.getElementById('randomButton').addEventListener('click', () => {
     var url = "http://localhost:3000/rand";
+    // var url = "http://phrazes.net/rand"; // Use this for the website
 
     $.ajax({
         type: "GET",
