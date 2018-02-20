@@ -47,7 +47,7 @@ router.post('/generate', function(req, res, next) {
     for (let word of phrases) {
         phrase += word + ' ';
     }
-    
+
     user.findOne({googleId: req.user.googleId}, (err, data)=>{
         data.phrases.push(phrase);
         data.strengths.push(zxcvbn(phrase).score);
