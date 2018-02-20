@@ -21,3 +21,10 @@
 .tab-container li:not(.selected):hover a{
     border-bottom-color: #11998e73;
 }
+
+/**
+ * Dashboard styles
+ */
+.avatar img {
+    width: 100%;
+}

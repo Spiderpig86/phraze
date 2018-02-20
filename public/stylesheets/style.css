@@ -10,7 +10,7 @@ body {
   background: #11998e;  /* fallback for old browsers */
 }
 
-.hero:after {
+.hero:before {
   background: url(/images/splash.svg) center;
   -webkit-background-size: 5223px 176px;
   background-size: 5223px 176px;
