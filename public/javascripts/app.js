@@ -19,8 +19,7 @@ function activate() {
  * Highlight pass phrase after clicking generate.
  */
 document.getElementById('generateButton').addEventListener('click', () => {
-    var url = "http://localhost:3000/generate";
-    // var url = "http://phrazes.net/generate"; // Use this for the website
+    var url = "/generate";
 
     $.ajax({
         type: "POST",
@@ -52,8 +51,7 @@ document.getElementById('generateButton').addEventListener('click', () => {
 });
 
 document.getElementById('randomButton').addEventListener('click', () => {
-    var url = "http://localhost:3000/rand";
-    // var url = "http://phrazes.net/rand"; // Use this for the website
+    var url = "/rand";
 
     $.ajax({
         type: "GET",
