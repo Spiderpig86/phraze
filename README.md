@@ -13,3 +13,9 @@ Phraze is designed to be an easy way to generate pass phrases to be used in user
 * :cloud: [Cirrus](https://spiderpig86.github.io/Cirrus/) - a CSS framework for quickly prototyping apps.
 * :key: [zxcvbn](https://github.com/dropbox/zxcvbn) - a low-budget password strength estimation.
 * :ledger: [Mongoose](http://mongoosejs.com/) - an elegant mongodb object modeling framework for Node.js
+
+## To-do:
+* Encryption / Decryption
+* Format average cracking time based on hours / days / years etc...
+* Implement pages for user's generated pass phrases (limit 10 per page?)
+* Implement limit on number of generated pass phrases (limit 50 - temporary?)
