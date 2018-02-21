@@ -75,7 +75,7 @@ router.post('/generate', function(req, res, next) {
 router.get('/rand', function(req, res, next) {
 
     // We need to generate the keywords for the pass phrase
-    res.send(generatePassphrase.entropy(1)); // Return the response
+    res.send(generatePassphrase.entropy(12)); // Return the response
 });
 
 router.post('/update', function(req, res, next) {
